@@ -3,6 +3,7 @@ package com.mycompany.app;
 import java.util.Arrays;
 import java.util.List;
 import java.util.OptionalDouble;
+import java.util.OptionalInt;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
@@ -73,6 +74,36 @@ public class PracticeQuestions {
 		
 		dist.forEach(System.out::println);
 		
+		
+		// display all record in sorted manner (ascending) that starts with 'a' in stringList
+
+		// display all record in sorted manner (descending) that starts with 'a' in stringList
+
+		// In one line check whether all record starts with 'a' in stringList
+
+		// In one line count records starts with 'a' in stringList
+		List<String> mstrings = Arrays.asList("maha", "maha", "megha", "manthani", "arunca" ,"manthani" ,"assam","megha");
+		
+		int mcount=(int) mstrings.stream().filter(s->s.startsWith("m")).count();
+		
+		System.out.println(mcount);
+		
+		
+
+		// In one line check whether all record starts with 'a' in stringList
+		 
+		// Find all even numbers between 1 to 5   		// Numbers between 1 to 5
+
+		// Find maximum of all numbers in IntStream
+
+		// Find minimum of all numbers in IntStream
+		
+		List<Integer> findMinMum  = Arrays.asList(4,44,92,24,8,5,6,9,11,89,101,87,54);
+		
+		
+		OptionalInt min =findMinMum.stream().mapToInt(Integer::intValue).min();
+		
+		System.out.println(min);
 	}
 
 }
